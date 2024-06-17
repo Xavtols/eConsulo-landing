@@ -1,11 +1,9 @@
-
-
-const accordeon = document.getElementsByClassName('contentBx');
-for (i = 0; i < accordeon.length; i++) {
-    accordeon[i].addEventListener('click', function () {
-        this.classList.toggle('active')
-    })
-}
+document.querySelectorAll('.accordeon .contentBx .label').forEach(label => {
+  label.addEventListener('click', () => {
+      const contentBx = label.parentElement;
+      contentBx.classList.toggle('active');
+  });
+});
 
 
 window.onbeforeunload = () => {
